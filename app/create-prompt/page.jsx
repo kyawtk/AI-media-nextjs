@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import Form from "@components/Form";
 
@@ -37,7 +37,9 @@ const CreatePrompt = () => {
       setSubmitting(false);
     }
   }
+useEffect(()=>{
 
+},[session])
   return (
     <div className="">
       <Form
