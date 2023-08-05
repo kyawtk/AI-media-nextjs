@@ -1,7 +1,9 @@
 'use client'
 import Feed from "@components/Feed";
+import Loading from "@components/Loading";
 
 import { useSession, signIn, signOut } from "next-auth/react"
+import { Suspense } from "react";
 const Home = () => {
   const {data} = useSession()
   
@@ -19,7 +21,11 @@ const Home = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
         delectus minima maxime quidem a magni nesciunt quisquam cum enim atque?
       </p>
-      <Feed></Feed>
+      <Suspense fallback={<Loading></Loading>}>
+
+          <Feed></Feed>
+      </Suspense>
+    
     </section>
   );
 };
