@@ -57,7 +57,13 @@ const Feed = () => {
         />
       </form>
       <PromptCardList
-        data={prompts}
+        data={prompts.filter((p) => {
+          return (
+            p.tag.includes(searchText) ||
+            p.prompt.includes(searchText) ||
+            p.creator.username.includes(searchText)
+          );
+        })}
         handleTagClick={handleTagClick}
       ></PromptCardList>
     </section>
