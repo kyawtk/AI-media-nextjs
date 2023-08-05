@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A social platform to share AI Prompts
+
+This project is built to touch up NEXT JS learning.
+
+## Features
+
+* Users can view, create ,share, delete their useful ai prompts
+* Users can authenticate and create profiles with Google profiles
+* Search for prompts of various topics
+
+## Learning Takeaways
+
+* Authentication using NEXT AUTH and concepts of Auth0
+* Backend API creation with route handlers
+* reusable tailwind classes with @apply
+
+
+## [DEMO](https://ai-media-nextjs.vercel.app/)
+
+
+
+
+
+
+
+
+
 
 ## Getting Started
 
