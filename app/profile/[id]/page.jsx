@@ -25,7 +25,7 @@ export const ProfilePageOther = ({ params }) => {
   }, [id]);
 
   useEffect(() => {
-    if (session.user.id == id) {
+    if (session && session.user.id == id) {
       router.push("/profile");
     }
   }, [id]);
