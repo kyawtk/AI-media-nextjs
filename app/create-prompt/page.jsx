@@ -14,11 +14,11 @@ const CreatePrompt = () => {
     prompt: "",
     tag: "",
   });
- console.log(session.user.id)
+ 
   async function createPrompt(e) {
     e.preventDefault();
     setSubmitting(true);
-    const userId = session ? session.user.id : ''
+    const userId = session?.user.id
     try {
       const res = await fetch("/api/prompt/new", {
         method: "POST",
@@ -37,9 +37,7 @@ const CreatePrompt = () => {
       setSubmitting(false);
     }
   }
-useEffect(()=>{
-  return
-},[session.user.id])
+
   return (
     <div className="">
       <Form
