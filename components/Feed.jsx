@@ -28,11 +28,11 @@ const Feed = () => {
     setSearchText(e.target.value);
   };
   const handleTagClick = (tag) => {
-    setPrompts((current) => {
-      return current.filter((post) => {
-        return post.tag.includes(tag);
-      });
-    });
+    // setPrompts((current) => {
+    //   return current.filter((post) => {
+    //     return post.tag.includes(tag);
+    //   });
+    // });
   };
 
   useEffect(() => {

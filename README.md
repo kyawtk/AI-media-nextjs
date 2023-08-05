@@ -18,7 +18,7 @@ This project is built to touch up NEXT JS learning.
 ## [DEMO](https://ai-media-nextjs.vercel.app/)
 
 
-
+<img src="/public/assets/images/ss.png" alt="Alt text" title=" title">
 
 
 
