@@ -38,8 +38,8 @@ const CreatePrompt = () => {
     }
   }
 useEffect(()=>{
-
-},[session])
+  return
+},[session.user.id])
   return (
     <div className="">
       <Form
