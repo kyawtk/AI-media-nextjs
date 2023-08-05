@@ -19,13 +19,21 @@ const PromptCardList = ({ data, handleTagClick }) => {
 
 import PromptCard from "./PromptCard";
 import { set } from "mongoose";
+import { useRouter } from "next/navigation";
 const Feed = () => {
+  const router = useRouter();
   const [searchText, setSearchText] = useState("");
   const [prompts, setPrompts] = useState([]);
   const handleChange = (e) => {
     setSearchText(e.target.value);
   };
-  const handleTagClick = (tag) => {};
+  const handleTagClick = (tag) => {
+    setPrompts((current) => {
+      return current.filter((post) => {
+        return post.tag.includes(tag);
+      });
+    });
+  };
 
   useEffect(() => {
     const fetchprompts = async () => {
